@@ -1,14 +1,3 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-
-import 'package:flutter_application_1/main.dart';
 
 void main() {
   // tipe data variable
@@ -17,8 +6,8 @@ void main() {
   // var
   print("variable");
   var mahasiswa= "jejang";
-  var umur = 20.toString();
-print(mahasiswa + " umur = " + umur);
+  var umur = 20;
+print(mahasiswa + " umur = " + umur.toString());
 print('-----------');
   // string
   print("string");
@@ -76,8 +65,7 @@ print('-----------');
   // conditional
   print("conditional");
   var nilai;
-  nilai = 80;
-  print("A");
+  nilai = 10;
   if (nilai >= 90) {
     print("A");
   } else if (nilai  <= 80 && nilai > 50) {
@@ -98,6 +86,85 @@ print('-----------');
   var A= hitungNilai2(mapel1: 50, mapel2: 80);
   print(A);
   hitungNilai3(79, 100);
+
+  // const
+print('-----------');
+print("const"); 
+const String mahasiswa2 ="fadil"; 
+print(mahasiswa2);
+print("-----------");
+// final
+print("-----------");
+print("final");
+// bisa di inisialisasi nanti tapi hanya sekali
+final String mahasiswa3;
+mahasiswa3 = "fadir";
+print(mahasiswa3);
+print("-----------");
+// null safety
+// (? ) untuk mengijinkan null
+// (! ) untuk memaksa tidak null
+// (late ) untuk inisialisasi nanti tapi dipastikan tidak null
+print("null safety");
+late String jurusan;
+jurusan = "teknologi informasi";
+jurusan = "sistem informasi";
+jurusan = "teknik komputer";
+print(jurusan.length);
+
+
+// perulangan/looping
+print("-----------");
+print("perulangan/looping");
+// for
+print("for");
+print("plus");
+for (int no =1; no <=5; no++){
+  print(no);
+}
+print("-----------");
+
+print("minus");
+for (int no =5; no >=1; no--){
+  print(no);
+}
+print("-----------");
+
+// while
+print("while");
+int no1 =1;
+int no2 =5;
+while (no1 <= no2){
+  print(no1);
+  no1++;
+  }
+// do while
+print("-----------");
+print("do while");
+int no3 =1;
+int no4 =5;
+do{
+  print(no3);
+  no3++;
+}
+while (no3 <= no4);
+print("-----------");
+// oop
+// membuat object
+var k1 = kendaraan("toyota", "merah", 100);
+  print(k1.maju(50));
+  print(k1.merk);
+  print(k1.warna);
+  print(k1.kecepatan);
+
+  print("-----------");
+  var k2 = kendaraan("Honda", "hijau jamet", 1000);
+  print(k2.maju(200));
+  print(k2.merk);
+  print(k2.warna);
+  print(k2.kecepatan);
+
+  print("-----------");
 
 }
 // function
@@ -125,3 +192,22 @@ print('-----------');
       var nilaiAkhir = mapel1 + mapel2;
       print(nilaiAkhir);
     }
+
+    // class
+class kendaraan {
+  // property
+  String? merk;
+  String? warna;
+  int? kecepatan;
+  // constructor
+  kendaraan(this.merk, this.warna, this.kecepatan);
+  // method 
+  maju(int kecepatan){
+    print(kecepatan.toString() + "km/h");
+  } 
+  // pewarisan
+
+  
+}
+
+
