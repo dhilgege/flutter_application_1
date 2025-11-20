@@ -151,21 +151,23 @@ while (no3 <= no4);
 print("-----------");
 // oop
 // membuat object
-var k1 = kendaraan("toyota", "merah", 100);
+var k1 = Kendaraan(merk: "toyota",warna: "merah", kecepatan: 100);
   print(k1.maju(50));
   print(k1.merk);
   print(k1.warna);
   print(k1.kecepatan);
 
   print("-----------");
-  var k2 = kendaraan("Honda", "hijau jamet", 1000);
+  var k2 = Kendaraan(merk: "Honda", warna: "hijau jamet", kecepatan: 1000);
   print(k2.maju(200));
   print(k2.merk);
   print(k2.warna);
   print(k2.kecepatan);
 
   print("-----------");
-
+  var s1 = Sedan(jumlahPintu: 4,kecepatanMaksimal:120 );
+  print(s1.jumlahPintu);
+  print(s1.kecepatanMaksimal);
 }
 // function
   hitungNilai(){
@@ -194,20 +196,23 @@ var k1 = kendaraan("toyota", "merah", 100);
     }
 
     // class
-class kendaraan {
+class Kendaraan {
   // property
   String? merk;
   String? warna;
   int? kecepatan;
   // constructor
-  kendaraan(this.merk, this.warna, this.kecepatan);
+  Kendaraan({this.merk, this.warna, this.kecepatan});
   // method 
   maju(int kecepatan){
     print(kecepatan.toString() + "km/h");
   } 
+ 
+  }
   // pewarisan
 
-  
-}
-
-
+ class Sedan extends Kendaraan {
+    int? jumlahPintu;
+    int? kecepatanMaksimal;
+    Sedan({String? merk, this.jumlahPintu, this.kecepatanMaksimal}):super(merk: merk);
+ }
