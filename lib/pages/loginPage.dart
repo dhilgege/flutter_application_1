@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/cubit/item_page.dart';
 import 'package:flutter_application_1/pages/cubit/visibility_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,7 +24,6 @@ class Loginpage extends StatelessWidget {
                 return TextField(
                   obscureText: visibilitiVal,
                   decoration: InputDecoration(
-                    
                     suffixIcon: IconButton(
                       onPressed: () {
                         ctxVisibility.read<VisibilityCubit>().visibiliti();
@@ -38,7 +38,17 @@ class Loginpage extends StatelessWidget {
             ),
             SizedBox(height: 20),
 
-            ElevatedButton(onPressed: () {}, child: Text('login')),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ItemPage(),
+                  ),
+                );
+              },
+              child: Text('login'),
+            ),
           ],
         ),
       ),

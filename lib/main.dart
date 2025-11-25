@@ -128,13 +128,15 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/bloc/authentication/authentication_bloc.dart';
 import 'package:flutter_application_1/pages/cubit/change_color_cubit.dart';
 import 'package:flutter_application_1/pages/cubit/counter_cubit.dart';
 import 'package:flutter_application_1/pages/cubit/favorite_count_cubit.dart';
 import 'package:flutter_application_1/pages/cubit/items_cubit.dart';
 import 'package:flutter_application_1/pages/cubit/visibility_cubit.dart';
+import 'package:flutter_application_1/pages/loginPage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+// import 'bloc/authentication/authentication_bloc.dart';
 import 'pages/cubit/item_page.dart';
 
 void main() => runApp
@@ -165,7 +167,8 @@ class CounterApp extends StatelessWidget {
     ),
     
   ],
-  child: ItemPage(),
+  child: Loginpage(),
+          
 ),
       // home: BlocProvider(
       //   create: (_) => CounterCubit(),

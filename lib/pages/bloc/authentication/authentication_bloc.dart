@@ -13,6 +13,7 @@ class AuthenticationBloc
       await Future.delayed(Duration(seconds: 5), () {
         print('a'); // cek data ke database
       });
+      emit(AuthenticationLoaded());
 
       emit(AuthenticationStateError(massage: "ini error"));
     });
