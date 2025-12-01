@@ -8,7 +8,7 @@ class ItemsCubit extends Cubit<List<Map<String, dynamic>>> {
     newList.add({
       "title": "New Item",
       "favorite": false,
-      "image": "asasets/images/profile.png",
+      "image": "asasets/images/p.jpg",
     });
     emit(newList);
   }
